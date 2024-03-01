@@ -7,6 +7,7 @@ export default new Vuetify({
   icons: {
     iconfont: 'fa',
   },
+
   theme: {
     options: { customProperties: true },
     themes: {
@@ -20,9 +21,9 @@ export default new Vuetify({
         info: '#1f98be',
       },
     },
-  },
-  typography: {
-    bodyFontFamily: ['Oswald', 'sans-serif'],
-    headingFontFamily: ['Oswald', 'sans-serif'],
+    typography: {
+      bodyFontFamily: ['Oswald', 'sans-serif'],
+      headingFontFamily: ['Oswald', 'sans-serif'],
+    },
   },
 })

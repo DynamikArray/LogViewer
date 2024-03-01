@@ -10,6 +10,7 @@
   "dependencies": {
     "apexcharts": "^3.46.0",
     "core-js": "^3.6.5",
+    "splitpanes": "^2.4.1",
     "vue": "^2.6.11",
     "vue-apexcharts": "^1.6.2",
     "vue-papa-parse": "^3.1.0",

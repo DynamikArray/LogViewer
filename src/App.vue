@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <!-- Left Sidebar -->
-    <v-navigation-drawer app v-model="drawer" color="background" right>
+    <v-navigation-drawer app v-model="drawer" color="grey lighten-3 pa-3" right>
       <!-- Sidebar content goes here -->
       <Drawer />
     </v-navigation-drawer>

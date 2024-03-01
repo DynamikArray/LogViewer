@@ -3,7 +3,7 @@
     type="line"
     height="100%"
     :options="chartOptions"
-    :series="seriesOptions"
+    :series="seriesData"
   ></apexchart>
 </template>
 
@@ -20,7 +20,7 @@ export default {
       type: Object,
       default: () => ({}),
     },
-    seriesOptions: {
+    seriesData: {
       type: Array,
       default: () => [],
     },

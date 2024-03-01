@@ -1,5 +1,9 @@
 <template>
-  <div class="ma-2">
+  <div class="ma-2text-center">
+    <h3 class="text-center text-h6 font-weight-black text-uppercase">
+      Settings:
+    </h3>
+    <v-divider class="mx-2"></v-divider>
     <CsvUploader :onComplete="onCompleted" />
   </div>
 </template>
