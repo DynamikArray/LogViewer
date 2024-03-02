@@ -58,7 +58,7 @@ export default {
     rpmSeriesData: function () {
       return [
         {
-          name: 'throttle',
+          name: 'Motor Rpm',
           data: this.$store.getters.rpmData,
         },
       ]
@@ -66,7 +66,7 @@ export default {
     throttleSeriesData: function () {
       return [
         {
-          name: 'throttle',
+          name: 'Throttle Input',
           data: this.$store.getters.throttleData,
         },
       ]
@@ -74,7 +74,10 @@ export default {
     throttleChartOptions: function () {
       return {
         ...chartOptions,
-        chart: { id: 'throttle', group: 'dataDashboard' },
+        chart: {
+          id: 'throttle',
+          group: 'dataDashboard',
+        },
         yaxis: {
           ...chartOptions.yaxis,
           title: {
@@ -88,6 +91,9 @@ export default {
     rpmChartOptions: function () {
       return {
         ...chartOptions,
+        zoomOptions: {
+          ...chartOptions.zoomOptions,
+        },
         chart: { id: 'rpm', group: 'dataDashboard' },
         yaxis: {
           ...chartOptions.yaxis,
@@ -99,6 +105,11 @@ export default {
     },
     getShowFullBrakeValues: function () {
       return this.$store.getters.showFullBrakeValues
+    },
+  },
+  methods: {
+    closeModal() {
+      this.modal = false
     },
   },
 }

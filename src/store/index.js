@@ -46,5 +46,18 @@ export default new Vuex.Store({
     },
     showFullBrakeValues: (state) =>
       state.chartOptions.throttle.showNegativeValues,
+    averageRpmValue: (state, getters) => {
+      if (!getters.hasLogsToView) return 0
+      const sum = getters.rpmData.reduce((acc, value) => acc + value, 0)
+      return Math.round(sum / getters.rpmData.length)
+    },
+    averageThrottleValue: (state, getters) => {
+      if (!getters.hasLogsToView) return 0
+      const sum = getters.throttleData.reduce((acc, value) => {
+        if (value < 0) return acc + 0
+        return acc + value
+      })
+      return Math.round(sum / getters.throttleData.length)
+    },
   },
 })

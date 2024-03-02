@@ -21,14 +21,10 @@ export default {
     },
   },
   methods: {
-    step(results) {
-      console.log('PUSH THIS ROW ONTO THE DATA SET?', results)
-    },
     handleFileUpload(event) {
       //Parse and use config, callback is ued for handling actions
       this.$papa.parse(event.target.files[0], {
         complete: this.onComplete,
-        // step: this.step,
       })
     },
   },
